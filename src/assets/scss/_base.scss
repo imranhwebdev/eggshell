@@ -1,0 +1,169 @@
+html, html body{
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: 'Tusker-Grotesk-5500';
+    src: url('../fonts/TuskerGrotesk-5500Medium.ttf');
+    src: local('☺'),  
+         url('../fonts/TuskerGrotesk-5500Medium.ttf') format('truetype'), 
+}
+
+@font-face {
+    font-family: 'Tusker-Grotesk-5600';
+    src: url('../fonts/TuskerGrotesk-5600Semibold.ttf');
+    src: local('☺'),  
+         url('../fonts/TuskerGrotesk-5600Semibold.ttf') format('truetype'), 
+}
+
+@font-face {
+    font-family: 'Tusker-Grotesk-5700';
+    src: url('../fonts/TuskerGrotesk-5700Bold.ttf');
+    src: local('☺'),  
+         url('../fonts/TuskerGrotesk-5700Bold.ttf') format('truetype'), 
+}
+
+
+body {
+    font-family: 'Tusker-Grotesk-5500';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 145%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 400;
+};
+
+h1{
+    @include font-231;
+}
+
+h2{
+    @include font-160;
+}
+
+h3{
+    @include font-147;
+}
+
+h4{
+    @include font-140;
+}
+
+h5{
+    @include font-40;
+}
+
+p {
+    margin: 0;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+figure{
+    margin-bottom: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none !important;
+    @include transition;
+}
+
+input,
+textarea,
+button {
+    padding: 10px 25px;
+    outline: none;
+    @include transition;
+}
+
+input:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+    border-color: #f3f3f3;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+    @include transition;
+}
+
+
+/*Hide number spin button*/
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.container {
+   max-width: 1640px;
+}
+
+.base {
+    &-btn {
+        display: inline-block;
+        border: 1px solid $primary;
+        border-radius: 5px;
+        padding: 23px 48px;
+        @include sm {
+            font-size: 18px;
+        }
+        &:hover {
+            background-color: transparent;
+            color: $primary;
+        }
+        &.bg-transparent {
+            color: $primary;
+            &:hover {
+                background-color: $primary !important;
+            }
+        }
+    }
+    &-padding {
+        padding-top: 200px;
+        @include sm{
+            padding-top: 100px;
+        }
+    }
+    // &-title {
+    //     // & p {
+    //     //     // @include font-18;
+    //     // }
+    // }
+}
+
+.-mb {
+    &-30 {
+        margin-bottom: -30px;
+    }
+}
+
+.seemore {
+    margin-top: 60px;
+    @include sm {
+        margin-top: 40px;
+    }
+}
+sub{
+    bottom: 0;
+}
