@@ -1,0 +1,24 @@
+.marquee{
+    border: 4px solid #343230;
+    background: $primary;
+    transform: translateY(35px) rotate(2.057deg);
+    padding: 17.143px 0px 16.857px 0px;
+    width: 106%;
+    margin-left: -3%;
+    position: relative;
+    z-index: 99;
+    .rfm-initial-child-container{
+        gap: 32px;
+        .rfm-child{
+            figure{
+                rotate: -2deg;
+                img{
+                    max-width: 176px;
+                }
+            }
+        }
+        .rfm-marquee-container{
+            height: 65px;
+        }
+    }
+}

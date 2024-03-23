@@ -1,0 +1,137 @@
+.who{
+    &-area{
+        padding-top: 200px;
+        padding-bottom: 150px;
+        background-color: $_bg1;
+        @include sm{
+            padding-top: 120px;
+            padding-bottom: 90px;
+        }
+        .marquee{
+            transform: translateY(170px) rotate(-0.844deg);
+            @include sm{
+                transform: translateY(98px) rotate(-0.844deg);
+            }
+        }
+    }
+    &-info{
+        border-radius: 48px;
+        border: 8px solid #343230;
+        background: #FFF;
+        padding-top: 120px;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        padding-left: 10px;
+        padding-right: 10px;
+        @include sm{
+            border-radius: 15px;
+            padding-top: 90px;
+        }
+        &::before{
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('../img/whoMShap.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        h3{
+            color: $primary;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            text-shadow: 0px 4.567px 0px rgba(0, 0, 0, 0.25);
+            -webkit-text-stroke-width: 9px;
+            -webkit-text-stroke-color: $heading;
+            font-family: 'Tusker-Grotesk-5700';
+            @include sm{
+                text-shadow: 0px 2.567px 0px rgba(0, 0, 0, 0.048);
+                -webkit-text-stroke-width: 4px;
+            }
+
+        }
+        p{
+            @include font-52;
+            font-weight: 500;
+            color: $_343230;
+            line-height: 145%;
+        }
+        figure{
+            max-width: 690px;
+            margin:0 auto;
+        }
+        .details{
+            max-width: 1092px;
+            margin: 0 auto;
+        }
+    }
+    &-dot1{
+        width: 57.895px;
+        height: 57.895px;
+        background: #397FFE;
+        position: absolute;
+        top: 27px;
+        left: 40px;
+        border-radius: 50%;
+        border: 1px solid #09090B;
+        @include sm{
+            width: 40px !important;
+            height: 40px !important;
+            top: 20px !important;
+            left: 25px !important;
+        }
+    }
+    &-dot2{
+        width: 57.895px;
+        height: 57.895px;
+        background: #397FFE;
+        position: absolute;
+        top: 27px;
+        right: 36px;
+        border-radius: 50%;
+        border: 1px solid #09090B;
+        @include sm{
+            width: 40px;
+            height: 40px;
+            right: 25px;
+            top: 20px;
+        }
+    }
+    &-dot3{
+        width: 57.895px;
+        height: 57.895px;
+        background: #397FFE;
+        position: absolute;
+        bottom: 30px;
+        left: 40px;
+        border-radius: 50%;
+        border: 1px solid #09090B;
+        @include sm{
+            width: 40px;
+            height: 40px;
+            left: 25px;
+            bottom: 20px;
+        }
+    }
+    &-dot4{
+        width: 57.895px;
+        height: 57.895px;
+        background: #397FFE;
+        position: absolute;
+        bottom: 30px;
+        right: 40px;
+        border-radius: 50%;
+        border: 1px solid #09090B;
+        @include sm{
+            width: 40px;
+            height: 40px;
+            right: 25px;
+            bottom: 20px;
+        }
+    }
+}

@@ -1,24 +1,12 @@
-import {React, useState} from 'react';
+
 import { Col, Container, Row } from "react-bootstrap";
-import { FaClipboardCheck  } from "react-icons/fa";
 import heroImg1 from '../assets/img/heroImg1.png';
 import heroImg2 from '../assets/img/heroImg2.png';
-import copyTxt from '../assets/img/copyTxt.png';
 import MarqueeSection from './MarqueeCommon';
+import CopyToClipboard from './CopyToClipboard';
 export default function Hero() {
   const title = "Eggshell";
   const desc = "Join the Luxe Life with EGGSHELL - The Pomeranian's Pick for Wealth and Whimsy";
-  const [textToCopy, setTextToCopy] = useState('BeqKgf3QYcPPXc1vLFxrL9BHocRFugeecNX4dWQ7HW5f');
-  const [isCopied, setIsCopied] = useState(false);
-  const handleCopyToClipboard = () => {
-      navigator.clipboard.writeText(textToCopy)
-        .then(() => {
-          setIsCopied(true);
-        })
-        .catch(err => {
-          console.error('Failed to copy to clipboard: ', err);
-        });
-    };
     const progressValue = [
       {
         value: "25",
@@ -31,53 +19,49 @@ export default function Hero() {
 
      
     };
-    console.log(defaultProgressValue)
   return (
     <section className="hero-area">
       <Container>
         <Row>
           <Col md={5}>
-            <figure>
+            <figure className='heroImg1'>
               <img src={heroImg1} alt="" />
             </figure>
           </Col>
           <Col md={7}>
             <h1>{title}</h1>
-            <div className="tokenomics_copyTxt copytoclipboard">
-                <span className='c_title'>Contract:</span> <input readOnly type="text"  value={textToCopy}
-                    onChange={(e) => setTextToCopy(e.target.value)}/>
-              <button onClick={handleCopyToClipboard}>
-                {!isCopied && (
-                  <span>
-                    <img src={copyTxt} alt="Copy Text" />
-                  </span>
-                )}
-                {isCopied && (
-                  <span className='copyed'>
-                    <FaClipboardCheck  />
-                  </span>
-                )}
-              </button>
-            </div>
+           <CopyToClipboard />
           </Col>
         </Row>
-        <Row>
-          <Col md={5}>
+        <Row className="align-items-end align-items-lg-start">
+          <Col md={5} className="order-2 order-md-1">
               <figure className='heroImg2'>
                 <img src={heroImg2} alt="" />
               </figure>
           </Col>
-          <Col md={7}>
+          <Col md={{ span: 6, offset: 1 }}  className="order-1 order-md-2">
             <div className="hero-content">
                 <p>{desc}</p>
 
-                <div className="value">
+                <div className="value d-flex align-items-center">
+                  <div className="value_bar active"></div>
                   <div className="value_bar"></div>
                   <div className="value_bar"></div>
                   <div className="value_bar"></div>
                   {progressValue.map((item, index)=>(
                     <span key={index}>{item.value}</span>
                   ))}
+                </div>
+                <div className="prograss-bar">
+                  <span className="active"></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span className="price">
+                  {progressValue.map((item, index)=>(
+                    <span key={index}>{item.price}</span>
+                  ))}
+                  </span>
                 </div>
             </div> 
           </Col>

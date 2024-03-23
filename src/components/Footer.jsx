@@ -80,7 +80,7 @@ export default function Footer() {
           <Col md={4}>
             <div className="socials">
               {socials.map((item, index)=>(
-                <a href={item.url}>{item.logo}</a>
+                <a href={item.url} key={index}>{item.logo}</a>
               ))}
               
             </div>

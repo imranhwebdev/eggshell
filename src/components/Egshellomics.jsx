@@ -18,21 +18,21 @@ export default function Egshellomics() {
     },
   ]
   return (
-    <section className="eggshellomics">
-      <figure className="egshmics">
+    <section className="eggshellomics-area">
+      <figure className="egshmics d-none d-md-block">
         <img src={eggshellomicsImg} alt="" />
       </figure>
       <Container>
         <Row>
           <Col>
-          <div className="section-title">
+          <div className="section-title text-center">
             <h2>{title}</h2>
           </div>
           </Col>
         </Row>
         <Row>
-          <Col lg={{ span: 7, offset: 5 }}>
-            <div className="eggmics-service">
+          <Col md={{ span: 7, offset: 5 }}>
+            <div className="eggshellomics-service">
               {eggmicsService.map((item, index)=>(
                 <div className="single-item" key={index}>
                   <h5 key={index} dangerouslySetInnerHTML={{ __html: item.title }} />

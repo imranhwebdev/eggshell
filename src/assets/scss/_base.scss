@@ -42,10 +42,12 @@ h6 {
 
 h1{
     @include font-231;
+    font-family: 'Tusker-Grotesk-5700';
 }
 
 h2{
     @include font-160;
+    font-family: 'Tusker-Grotesk-5700';
 }
 
 h3{
@@ -166,4 +168,20 @@ input::-webkit-inner-spin-button {
 }
 sub{
     bottom: 0;
+}
+
+.section-title{
+    h2{
+        text-transform: uppercase;
+        color: $primary;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-shadow: 0px 4.96px 0px rgba(0, 0, 0, 0.25);
+        -webkit-text-stroke-width: 12px;
+        -webkit-text-stroke-color: #343230;
+        @include sm{
+            text-shadow: 0px 2.96px 0px rgba(0, 0, 0, 0.105);
+            -webkit-text-stroke-width: 4px;
+        }
+    }
 }

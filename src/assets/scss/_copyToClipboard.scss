@@ -1,0 +1,61 @@
+.copytoclipboard-inner{
+    position: relative;
+    z-index: 1;
+    .copytoclipboard{
+        position: relative;
+        border-radius: 16px;
+        border: 1px solid #050606;
+        background: $white;
+        box-shadow: 5px 4px 0px 0px #000;
+        padding: 24px;
+        max-width: 739px;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        .c_title{
+            color: $black;
+            @include font-28;
+            font-family: 'Tusker-Grotesk-5600';
+            margin-right: 8px;
+        }
+        input{
+            padding:0;
+            border:0;
+            font-family: 'Tusker-Grotesk-5700';
+            color: $primary;
+            @include font-24;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: #050606;
+            width: 100%;
+            padding-right: 10px;
+        }
+        button{
+            padding: 14.933px 14.932px;
+            border-radius: 6.4px;
+            border: 2.133px solid #000;
+            background: #FFF;
+            position: absolute;
+            bottom: -14px;
+            right: -39px;
+            img{
+                max-width: 34px;
+                @include sm{
+                    max-width: 25px;
+                }
+            }
+            svg{
+                font-size: 34px;
+                @include sm{
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+    .star{
+        position: absolute;
+        top: -29px;
+        left: -29px;
+        z-index: -1;
+        max-width: 60px;
+    }
+}
