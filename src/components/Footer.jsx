@@ -1,21 +1,9 @@
-import {React, useState} from 'react';
 import { Container, Row, Col } from "react-bootstrap";
-import { FaClipboardCheck, FaInstagram, FaYoutube, FaDiscord, FaPaperPlane} from "react-icons/fa";
+import { FaInstagram, FaYoutube, FaDiscord, FaPaperPlane} from "react-icons/fa";
 import footerLogo from "../assets/img/footerLogo.png";
 import fbtnLogo from "../assets/img/fbtnLogo.png";
-import copyTxt from '../assets/img/copyTxt.png';
+import CopyToClipboard from './CopyToClipboard';
 export default function Footer() {
-  const [textToCopy, setTextToCopy] = useState('BeqKgf3QYcPPXc1vLFxrL9BHocRFugeecNX4dWQ7HW5f');
-  const [isCopied, setIsCopied] = useState(false);
-  const handleCopyToClipboard = () => {
-      navigator.clipboard.writeText(textToCopy)
-        .then(() => {
-          setIsCopied(true);
-        })
-        .catch(err => {
-          console.error('Failed to copy to clipboard: ', err);
-        });
-    };
     const title = "EGGSHELL";
     const btnTxt = "COMMING SOON EGGSHELL";
     const btnLink = "https://google.com";
@@ -50,22 +38,7 @@ export default function Footer() {
               <a href="/" className="footere-logo">
                 <img src={footerLogo} alt="" />
               </a>
-              <div className="tokenomics_copyTxt copytoclipboard">
-                <span className='c_title'>Contract:</span> <input readOnly type="text"  value={textToCopy}
-                    onChange={(e) => setTextToCopy(e.target.value)}/>
-              <button onClick={handleCopyToClipboard}>
-                {!isCopied && (
-                  <span>
-                    <img src={copyTxt} alt="Copy Text" />
-                  </span>
-                )}
-                {isCopied && (
-                  <span className='copyed'>
-                    <FaClipboardCheck  />
-                  </span>
-                )}
-              </button>
-            </div>
+              <CopyToClipboard />
             <h4 className='footer-title'>{title}</h4>
             </div>
           </Col>
@@ -82,7 +55,6 @@ export default function Footer() {
               {socials.map((item, index)=>(
                 <a href={item.url} key={index}>{item.logo}</a>
               ))}
-              
             </div>
           </Col>
         </Row>
