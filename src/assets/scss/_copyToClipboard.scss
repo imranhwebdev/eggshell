@@ -12,11 +12,19 @@
         display: flex;
         align-items: center;
         width: 100%;
+        @include sm{
+            padding: 15px;
+            border-radius: 10px;
+        }
         .c_title{
             color: $black;
             @include font-28;
             font-family: 'Tusker-Grotesk-5600';
             margin-right: 8px;
+            @include sm{
+                font-size: 16px;
+                margin-right: 5px;
+            }
         }
         input{
             padding:0;
@@ -27,7 +35,12 @@
             -webkit-text-stroke-width: 1px;
             -webkit-text-stroke-color: #050606;
             width: 100%;
-            padding-right: 10px;
+            padding-right: 10px; 
+            @include sm{
+                font-size: 16px;
+                padding-right: 35px;
+                -webkit-text-stroke-width: .5px;
+            }
         }
         button{
             padding: 14.933px 14.932px;
@@ -37,6 +50,14 @@
             position: absolute;
             bottom: -14px;
             right: -39px;
+            @include sm{
+                padding: 6px;
+                border-radius: 4px;
+                top: 50%;
+                right: 3px;
+                bottom: auto;
+                transform: translateY(-50%);
+            }
             img{
                 max-width: 34px;
                 @include sm{

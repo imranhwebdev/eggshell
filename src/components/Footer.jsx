@@ -35,7 +35,7 @@ export default function Footer() {
         <Row>
           <Col>
             <div className="footer-top text-center">
-              <a href="/" className="footere-logo">
+              <a href="/" className="logo">
                 <img src={footerLogo} alt="" />
               </a>
               <CopyToClipboard />
@@ -43,19 +43,19 @@ export default function Footer() {
             </div>
           </Col>
         </Row>
-        <Row>
-          <Col md={4}>
-            <a href={btnLink}><img src={fbtnLogo} alt="" />{btnTxt}</a>
+        <Row className="footer-bottom align-items-center">
+          <Col lg={4} md={12} xs={12} className="text-center text-lg-start mb-4">
+            <a href={btnLink} className="boxedBtn"><img className="btnLogo" src={fbtnLogo} alt="" />{btnTxt}</a>
           </Col>
-          <Col md={4}>
+          <Col lg={4} md={6} className="text-center mt-md-4 pt-3 mt-md-0">
             <p>{copyright}</p>
           </Col>
-          <Col md={4}>
-            <div className="socials">
+          <Col lg={4} md={6} className="text-md-end text-center mt-4 mt-md-0">
+            <ul className="socials">
               {socials.map((item, index)=>(
-                <a href={item.url} key={index}>{item.logo}</a>
+                <li key={index}><a href={item.url}>{item.logo}</a></li>
               ))}
-            </div>
+            </ul>
           </Col>
         </Row>
       </Container>

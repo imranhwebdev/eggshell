@@ -1,0 +1,116 @@
+.footer{
+    position: relative;
+    z-index: 1;
+    padding-top: 180px;
+    padding-bottom: 80px;
+    background-color: $_bg1;
+    
+    &::before{
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+         background-image: url('../img/footer-shap.png');
+         background-position: top center;
+         background-repeat: no-repeat;
+         background-size: contain;
+         z-index: -1;
+    }
+    @include sm{
+        padding-top: 100px;
+        padding-bottom: 40px;
+    }
+    &-top{
+        text-align: center;
+        .copytoclipboard-inner {
+            margin: -90px auto 95px;
+            max-width: 750px;
+            @include mmd{
+                margin: -50px auto 55px;
+
+            }
+        }
+        .logo{
+            img{
+                max-width: 358px;
+                margin:0 auto;
+            }
+        }
+        h4{
+            color: $white;
+            text-transform: uppercase;  
+            -webkit-text-stroke-width: 13px;
+            -webkit-text-stroke-color: var(--heading, #09090B);
+            display: inline-block;
+            margin-bottom: 55px;
+            @include lg{
+                -webkit-text-stroke-width: 6px;
+            }
+            @include mmd{
+                -webkit-text-stroke-width: 4px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+    &-bottom{
+        .boxedBtn{
+            padding: 24px;
+            @include font-32;
+            font-weight: 700;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: #050606;
+            font-family: 'Tusker-Grotesk-5700';
+            color: $white;
+            text-transform: uppercase;
+            border-radius: 16px;
+            border: 3px solid $heading;
+            background: $primary;
+            box-shadow: 5px 4px 0px 0px $black;
+            max-width: 450px;
+            display: inline-block;
+            @include xl{
+                font-size: 20px;
+                padding: 20px 12px;
+            }
+            @include lg{
+                font-size: 20px;
+                padding: 20px 12px;
+            }
+            @include mmd{
+                font-size: 20px;
+                padding: 12px 12px;
+            }
+            
+            @include sm{
+                margin: 0 auto;
+             }
+            .btnLogo{
+                max-width: 48px;
+                display: inline-block;
+                margin-right: 15px;
+                @include lg{
+                    margin-right: 10px;
+                }
+                @include mmd{
+                    margin-right: 10px;
+                }
+            }
+        }
+        p{
+            @include font-48;
+            font-family: 'FormulaCondensed';
+            font-weight: 700;
+            letter-spacing: 3.84px;
+            text-transform: capitalize;
+            color: $paragraph;
+        }
+    }
+    .copytoclipboard{
+        background-color: #F1F2F7;
+        input{
+            background-color: #F1F2F7;
+        }
+    }
+}

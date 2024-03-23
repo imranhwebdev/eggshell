@@ -1,7 +1,7 @@
-import Egshellomics from "./components/Egshellomics";
-import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import WhoIsEgshel from "./components/WhoIsEgshel";
+import Egshellomics from "./components/Egshellomics";
+import Footer from "./components/Footer";
 
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
     <>
       <Hero />
       <WhoIsEgshel />
-       <Egshellomics />
+      <Egshellomics />
       <Footer />
     </>
   )

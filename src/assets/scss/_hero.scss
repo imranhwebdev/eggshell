@@ -2,10 +2,17 @@
     &-area{
         padding-top: 128px;
         background-color: $_bg2;
+        @include sm{
+            padding-top: 80px;
+        }
         .heroImg1{
             max-width: 262px;
             margin-left:auto;
             margin-right: 55px;
+            @include sm{
+                margin-right: auto;
+
+            }
         }
         .heroImg2{
             max-width: 667px;
@@ -20,13 +27,46 @@
             -webkit-text-stroke-color: #343230;
             text-transform: uppercase;
             margin-bottom: 15px;
-            @include sm{
+            @include xxl{
                 -webkit-text-stroke-width: 8px;
+            }
+            @include xl{
+                -webkit-text-stroke-width: 8px;
+            }
+            @include lg{
+                -webkit-text-stroke-width: 8px;
+            }
+            @include mmd{
+                -webkit-text-stroke-width: 8px;
+            }
+            @include sm{
+                text-align: center;
+                margin-top: 30px;
+                margin-bottom: 20px;
+            }
+        }
+        .copytoclipboard-inner{
+            margin-left: 30px;
+            .copytoclipboard{
+                width: calc(100% - 34px);
+                @include sm{
+                    width: 100%;
+                }
             }
         }
     }
     &-content{
         margin-top: 86px;
+        @include sm{
+            margin-top: 40px;
+            text-align: center;
+        }
+        @include lg{
+            margin-bottom: 80px;
+        }
+        @include md{
+            margin-bottom: 80px;
+        }
         p{
             @include font-36;
             color: $_343230;

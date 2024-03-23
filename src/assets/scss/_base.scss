@@ -24,6 +24,14 @@ html, html body{
 }
 
 
+@font-face {
+    font-family: 'FormulaCondensed';
+    src: url('../fonts/FormulaCondensed-Bold.ttf');
+    src: local('☺'),  
+         url('../fonts/FormulaCondensed-Bold.ttf') format('truetype'), 
+}
+
+
 body {
     font-family: 'Tusker-Grotesk-5500';
     font-size: 16px;
@@ -37,7 +45,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: 400;
+    font-family: 'Tusker-Grotesk-5700';
 };
 
 h1{
@@ -121,54 +129,6 @@ input::-webkit-inner-spin-button {
    max-width: 1640px;
 }
 
-.base {
-    &-btn {
-        display: inline-block;
-        border: 1px solid $primary;
-        border-radius: 5px;
-        padding: 23px 48px;
-        @include sm {
-            font-size: 18px;
-        }
-        &:hover {
-            background-color: transparent;
-            color: $primary;
-        }
-        &.bg-transparent {
-            color: $primary;
-            &:hover {
-                background-color: $primary !important;
-            }
-        }
-    }
-    &-padding {
-        padding-top: 200px;
-        @include sm{
-            padding-top: 100px;
-        }
-    }
-    // &-title {
-    //     // & p {
-    //     //     // @include font-18;
-    //     // }
-    // }
-}
-
-.-mb {
-    &-30 {
-        margin-bottom: -30px;
-    }
-}
-
-.seemore {
-    margin-top: 60px;
-    @include sm {
-        margin-top: 40px;
-    }
-}
-sub{
-    bottom: 0;
-}
 
 .section-title{
     h2{
@@ -179,9 +139,71 @@ sub{
         text-shadow: 0px 4.96px 0px rgba(0, 0, 0, 0.25);
         -webkit-text-stroke-width: 12px;
         -webkit-text-stroke-color: #343230;
-        @include sm{
-            text-shadow: 0px 2.96px 0px rgba(0, 0, 0, 0.105);
+        @include lg{
+            -webkit-text-stroke-width: 4px;
+        }
+        @include mmd{
+            text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.25);
             -webkit-text-stroke-width: 4px;
         }
     }
+}
+
+.socials{
+    li{
+        display: inline-block;
+        margin-left: 24px;
+        @include sm{
+            margin-left: 15px;
+        }
+        a{
+            width: 95px;
+            height: 95px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12.884px;
+            border: 1.189px solid #343230;
+            background: #FFF;
+            box-shadow: 3.234px 3.234px 0px 0px #000;
+            svg{
+                color: $black;
+                font-size: 45px;
+                @include xl{
+                    font-size: 26px;
+                }
+                @include lg{
+                    font-size: 26px;
+                }
+                @include mmd{
+                    font-size: 26px;
+                }
+            }
+            @include xl{
+                width: 60px;
+                height: 60px;
+            }
+            @include lg{
+                width: 60px;
+                height: 60px;
+            }
+            @include mmd{
+                width: 60px;
+                height: 60px;
+            }
+        }
+    }
+    li:nth-child(1){
+        margin-left: 0;
+    }
+    li:hover a{
+        border: 1.189px solid $primary;
+        background: $primary;
+        box-shadow: 3.234px 3.234px 0px 0px #000;
+
+    }
+    li:hover a svg{
+       color: $white;
+    }
+   
 }

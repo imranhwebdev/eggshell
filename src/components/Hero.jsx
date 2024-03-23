@@ -1,9 +1,13 @@
-
+import React from 'react'
+import Snowfall from 'react-snowfall'
 import { Col, Container, Row } from "react-bootstrap";
 import heroImg1 from '../assets/img/heroImg1.png';
 import heroImg2 from '../assets/img/heroImg2.png';
+// import snowflake0 from '../assets/img/snow0.png';
+// import snowflake1 from '../assets/img/snow1.png';
 import MarqueeSection from './MarqueeCommon';
 import CopyToClipboard from './CopyToClipboard';
+// const images = [snowflake0, snowflake1];
 export default function Hero() {
   const title = "Eggshell";
   const desc = "Join the Luxe Life with EGGSHELL - The Pomeranian's Pick for Wealth and Whimsy";
@@ -16,11 +20,10 @@ export default function Hero() {
     const defaultProgressValue = {
       value:progressValue[0].value,
       price:progressValue[0].price,
-
-     
     };
   return (
     <section className="hero-area">
+       <Snowfall snowflakeCount={100}/>
       <Container>
         <Row>
           <Col md={5}>
