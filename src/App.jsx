@@ -9,7 +9,7 @@ function App() {
     <>
       <Hero />
       <WhoIsEgshel />
-      <Egshellomics />
+       <Egshellomics />
       <Footer />
     </>
   )
