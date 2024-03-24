@@ -16,30 +16,16 @@
             padding: 15px;
             border-radius: 10px;
         }
-        .c_title{
-            color: $black;
-            @include font-28;
-            font-family: 'Tusker-Grotesk-5600';
-            margin-right: 8px;
-            @include sm{
-                font-size: 16px;
-                margin-right: 5px;
-            }
-        }
         input{
             padding:0;
             border:0;
-            font-family: 'Tusker-Grotesk-5700';
             color: $primary;
             @include font-24;
-            -webkit-text-stroke-width: 1px;
-            -webkit-text-stroke-color: #050606;
             width: 100%;
             padding-right: 10px; 
             @include sm{
                 font-size: 16px;
                 padding-right: 35px;
-                -webkit-text-stroke-width: .5px;
             }
         }
         button{
@@ -71,12 +57,5 @@
                 }
             }
         }
-    }
-    .star{
-        position: absolute;
-        top: -29px;
-        left: -29px;
-        z-index: -1;
-        max-width: 60px;
     }
 }

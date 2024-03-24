@@ -2,7 +2,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import eggshellomicsImg from '../assets/img/eggshellomics.png'
 import MarqueeCommon from "./MarqueeCommon";
 export default function Egshellomics() {
-  const title = "EGGSHELLomics";
+  const title = "MOATenomics";
   const eggmicsService = [
     {
       title: "THE Base <br /> coop"

@@ -1,42 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap');
 html, html body{
     overflow-x: hidden;
 }
 
 @font-face {
-    font-family: 'Tusker-Grotesk-5500';
-    src: url('../fonts/TuskerGrotesk-5500Medium.ttf');
+    font-family: 'Ballo';
+    src: url('../fonts/Baloo-Regular.ttf');
     src: local('☺'),  
-         url('../fonts/TuskerGrotesk-5500Medium.ttf') format('truetype'), 
-}
-
-@font-face {
-    font-family: 'Tusker-Grotesk-5600';
-    src: url('../fonts/TuskerGrotesk-5600Semibold.ttf');
-    src: local('☺'),  
-         url('../fonts/TuskerGrotesk-5600Semibold.ttf') format('truetype'), 
-}
-
-@font-face {
-    font-family: 'Tusker-Grotesk-5700';
-    src: url('../fonts/TuskerGrotesk-5700Bold.ttf');
-    src: local('☺'),  
-         url('../fonts/TuskerGrotesk-5700Bold.ttf') format('truetype'), 
-}
-
-
-@font-face {
-    font-family: 'FormulaCondensed';
-    src: url('../fonts/FormulaCondensed-Bold.ttf');
-    src: local('☺'),  
-         url('../fonts/FormulaCondensed-Bold.ttf') format('truetype'), 
+         url('../fonts/Baloo-Regular.ttf') format('truetype'), 
 }
 
 
 body {
-    font-family: 'Tusker-Grotesk-5500';
+    font-family: 'Ballo';
     font-size: 16px;
     font-weight: 500;
     line-height: 145%;
+    font-family: "Baloo 2", sans-serif;
 }
 
 h1,
@@ -45,17 +25,21 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Tusker-Grotesk-5700';
+    font-family: 'Ballo';
 };
 
 h1{
     @include font-231;
-    font-family: 'Tusker-Grotesk-5700';
+    text-shadow: -10px 10px 0px #4C7EF6;
+    -webkit-text-stroke-width: 9;
+    -webkit-text-stroke-color: #16161B;
 }
 
 h2{
     @include font-160;
-    font-family: 'Tusker-Grotesk-5700';
+    text-shadow: -10px 10px 0px #4C7EF6;
+    -webkit-text-stroke-width: 9;
+    -webkit-text-stroke-color: #16161B;
 }
 
 h3{
@@ -64,6 +48,9 @@ h3{
 
 h4{
     @include font-140;
+    text-shadow: -10px 10px 0px #4C7EF6;
+    -webkit-text-stroke-width: 9;
+    -webkit-text-stroke-color: #16161B;
 }
 
 h5{
@@ -133,19 +120,8 @@ input::-webkit-inner-spin-button {
 .section-title{
     h2{
         text-transform: uppercase;
-        color: $primary;
+        color: #FEF8F8;
         font-weight: 700;
-        text-transform: uppercase;
-        text-shadow: 0px 4.96px 0px rgba(0, 0, 0, 0.25);
-        -webkit-text-stroke-width: 12px;
-        -webkit-text-stroke-color: #343230;
-        @include lg{
-            -webkit-text-stroke-width: 4px;
-        }
-        @include mmd{
-            text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.25);
-            -webkit-text-stroke-width: 4px;
-        }
     }
 }
 

@@ -41,22 +41,13 @@
             background-position: center center;
         }
         h3{
-            color: $primary;
+            color: #FEF8F8;
             font-weight: 700;
             text-transform: uppercase;
             margin-bottom: 40px;
-            text-shadow: 0px 4.567px 0px rgba(0, 0, 0, 0.25);
-            -webkit-text-stroke-width: 9px;
-            -webkit-text-stroke-color: $heading;
-            font-family: 'Tusker-Grotesk-5700';
-            @include lg{
-                text-shadow: 0px 2.567px 0px rgba(0, 0, 0, 0.048);
-                -webkit-text-stroke-width: 4px;
-            }
-            @include mmd{
-                text-shadow: 0px 2.567px 0px rgba(0, 0, 0, 0.048);
-                -webkit-text-stroke-width: 4px;
-            }
+            text-shadow: -10px 10px 0px #4C7EF6;
+            -webkit-text-stroke-width: 9;
+            -webkit-text-stroke-color: #16161B;
 
         }
         p{
@@ -72,70 +63,6 @@
         .details{
             max-width: 1092px;
             margin: 0 auto;
-        }
-    }
-    &-dot1{
-        width: 57.895px;
-        height: 57.895px;
-        background: #397FFE;
-        position: absolute;
-        top: 27px;
-        left: 40px;
-        border-radius: 50%;
-        border: 1px solid #09090B;
-        @include sm{
-            width: 40px !important;
-            height: 40px !important;
-            top: 20px !important;
-            left: 25px !important;
-        }
-    }
-    &-dot2{
-        width: 57.895px;
-        height: 57.895px;
-        background: #397FFE;
-        position: absolute;
-        top: 27px;
-        right: 36px;
-        border-radius: 50%;
-        border: 1px solid #09090B;
-        @include sm{
-            width: 40px;
-            height: 40px;
-            right: 25px;
-            top: 20px;
-        }
-    }
-    &-dot3{
-        width: 57.895px;
-        height: 57.895px;
-        background: #397FFE;
-        position: absolute;
-        bottom: 30px;
-        left: 40px;
-        border-radius: 50%;
-        border: 1px solid #09090B;
-        @include sm{
-            width: 40px;
-            height: 40px;
-            left: 25px;
-            bottom: 20px;
-        }
-    }
-    &-dot4{
-        width: 57.895px;
-        height: 57.895px;
-        background: #397FFE;
-        position: absolute;
-        bottom: 30px;
-        right: 40px;
-        border-radius: 50%;
-        border: 1px solid #09090B;
-        @include sm{
-            width: 40px;
-            height: 40px;
-            right: 25px;
-            bottom: 20px;
         }
     }
 }

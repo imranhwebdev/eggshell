@@ -7,16 +7,15 @@ const snowflake0 = document.createElement('img')
 snowflake0.src = '/public/heroImg1.png'
 const snowflake1 = document.createElement('img')
 snowflake1.src = '/public/heroImg2.png'
-const snowflake3 = document.createElement('img')
-snowflake3.src = '/public/whoIseggshellImg.png'
+const snowflake2 = document.createElement('img')
+snowflake2.src = '/public/whoIseggshellImg.png'
 import MarqueeSection from './MarqueeCommon';
 import CopyToClipboard from './CopyToClipboard';
 
-const images = [snowflake0, snowflake1, snowflake3];
+const images = [snowflake0, snowflake1, snowflake2];
 
 export default function Hero() {
-  const title = "Eggshell";
-  const desc = "Join the Luxe Life with EGGSHELL - The Pomeranian's Pick for Wealth and Whimsy";
+  const title = "$MOAT";
     const progressValue = [
       {
         value: "25",
@@ -50,7 +49,6 @@ export default function Hero() {
           </Col>
           <Col md={{ span: 6, offset: 1 }}  className="order-1 order-md-2">
             <div className="hero-content">
-                <p>{desc}</p>
 
                 <div className="value d-flex align-items-center">
                   <div className="value_bar active"></div>

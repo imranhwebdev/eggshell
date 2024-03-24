@@ -2,7 +2,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import whoIsImg from "../assets/img/whoIseggshellImg.png"
 import MarqueeCommon from "./MarqueeCommon";
 export default function WhoIsEgshel() {
-  const title = "Who is Eggshell?";
+  const title = "Who is $MOAT";
   const desc = "EGGSHELL is the champion of the base ecosystem. Protecting vibing and growing a Eggshell commonuity"
   return (
     <section className="who-area">

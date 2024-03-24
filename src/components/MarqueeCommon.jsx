@@ -1,67 +1,184 @@
 import React from 'react'
-import marqueeImg1 from '../assets/img/$EGGSHELL.png';
+import marqueeImg from '../assets/img/$moat.png';
 import Marquee from "react-fast-marquee";
 export default function MarqueeCommon() {
   const marqueeImgs = [
     {
-        image: marqueeImg1,
-        alt: "Description for the image",
+        image: marqueeImg,
     },
     {
-        image: marqueeImg1,
-        alt: "Description for the image",
+        image: marqueeImg,
     },
     {
-        image: marqueeImg1,
-        alt: "Description for the image",
+        image: marqueeImg,
     },
     {
-        image: marqueeImg1,
-        alt: "Description for the image",
+        image: marqueeImg,
     },
     {
-        image: marqueeImg1,
-        alt: "Description for the image",
+        image: marqueeImg,
     },
     {
-        image: marqueeImg1,
-        alt: "Description for the image",
+        image: marqueeImg,
     },
     {
-        image: marqueeImg1,
-        alt: "Description for the image",
+        image: marqueeImg,
     },
     {
-        image: marqueeImg1,
-        alt: "Description for the image",
+        image: marqueeImg,
     },
     {
-        image: marqueeImg1,
-        alt: "Description for the image",
+        image: marqueeImg,
     },
     {
-        image: marqueeImg1,
-        alt: "Description for the image",
+        image: marqueeImg,
     },
     {
-        image: marqueeImg1,
-        alt: "Description for the image",
+        image: marqueeImg,
     },
     {
-        image: marqueeImg1,
-        alt: "Description for the image",
+        image: marqueeImg,
     },
     {
-        image: marqueeImg1,
-        alt: "Description for the image",
+        image: marqueeImg,
     },
     {
-        image: marqueeImg1,
-        alt: "Description for the image",
+        image: marqueeImg,
     },
     {
-        image: marqueeImg1,
-        alt: "Description for the image",
+        image: marqueeImg,
+    },
+    {
+        image: marqueeImg,
+    },
+    {
+        image: marqueeImg,
+    },
+    {
+        image: marqueeImg,
+    },
+    {
+        image: marqueeImg,
+    },
+    {
+        image: marqueeImg,
+    },
+    {
+        image: marqueeImg,
+    },
+    {
+        image: marqueeImg,
+    },
+    {
+        image: marqueeImg,
+    },
+    {
+        image: marqueeImg,
+    },
+    {
+        image: marqueeImg,
+    },
+    {
+        image: marqueeImg,
+    },
+    {
+        image: marqueeImg,
+    },
+    {
+        image: marqueeImg,
+    },
+    {
+        image: marqueeImg,
+    },
+    {
+        image: marqueeImg,
+    },
+    {
+        image: marqueeImg,
+    },
+    {
+        image: marqueeImg,
+    },
+    {
+        image: marqueeImg,
+    },
+    {
+        image: marqueeImg,
+    },
+    {
+        image: marqueeImg,
+    },
+    {
+        image: marqueeImg,
+    },
+    {
+        image: marqueeImg,
+    },
+    {
+        image: marqueeImg,
+    },
+    {
+        image: marqueeImg,
+    },
+    {
+        image: marqueeImg,
+    },
+    {
+        image: marqueeImg,
+    },
+    {
+        image: marqueeImg,
+    },
+    {
+        image: marqueeImg,
+    },
+    {
+        image: marqueeImg,
+    },
+    {
+        image: marqueeImg,
+    },
+    {
+        image: marqueeImg,
+    },
+    {
+        image: marqueeImg,
+    },
+    {
+        image: marqueeImg,
+    },
+    {
+        image: marqueeImg,
+    },
+    {
+        image: marqueeImg,
+    },
+    {
+        image: marqueeImg,
+    },
+    {
+        image: marqueeImg,
+    },
+    {
+        image: marqueeImg,
+    },
+    {
+        image: marqueeImg,
+    },
+    {
+        image: marqueeImg,
+    },
+    {
+        image: marqueeImg,
+    },
+    {
+        image: marqueeImg,
+    },
+    {
+        image: marqueeImg,
+    },
+    {
+        image: marqueeImg,
     },
 ];
   return (
@@ -69,7 +186,7 @@ export default function MarqueeCommon() {
        <Marquee direction="left">
             {marqueeImgs.map((marqueeImg, index) => (
                 <figure key={index}>
-                    <img src={marqueeImg.image} alt={marqueeImg.alt} />
+                    <img src={marqueeImg.image} alt="" />
                 </figure>
             ))}
         </Marquee>

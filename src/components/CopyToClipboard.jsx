@@ -1,7 +1,6 @@
 import {React, useState} from 'react';
 import { LuCopyCheck } from "react-icons/lu";
-import copyTxt from '../assets/img/copyTxt.png';
-import star from '../assets/img/star.png';
+import { IoCopyOutline } from "react-icons/io5";
 
 export default function CopyToClipboard() {
     const [textToCopy, setTextToCopy] = useState('BeqKgf3QYcPPXc1vLFxrL9BHocRFugeecNX4dWQ7HW5f');
@@ -17,17 +16,14 @@ export default function CopyToClipboard() {
       };
   return (
     <div className="copytoclipboard-inner">
-        <figure className='star'>
-            <img src={star} alt="" />
-        </figure>
         <div className="copytoclipboard">
-            <span className='c_title'>Contract:</span> 
+            <span className='c_title'></span> 
             <input readOnly type="text"  value={textToCopy}
                 onChange={(e) => setTextToCopy(e.target.value)}/>
             <button onClick={handleCopyToClipboard}>
                 {!isCopied && (
                 <span>
-                    <img src={copyTxt} alt="Copy Text" />
+                     <IoCopyOutline />
                 </span>
                 )}
                 {isCopied && (

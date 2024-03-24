@@ -40,18 +40,9 @@
         }
         h4{
             color: $white;
-            text-transform: uppercase;  
-            -webkit-text-stroke-width: 13px;
-            -webkit-text-stroke-color: var(--heading, #09090B);
+            text-transform: uppercase; 
             display: inline-block;
             margin-bottom: 55px;
-            @include lg{
-                -webkit-text-stroke-width: 6px;
-            }
-            @include mmd{
-                -webkit-text-stroke-width: 4px;
-                margin-bottom: 30px;
-            }
         }
     }
     &-bottom{
@@ -59,9 +50,9 @@
             padding: 24px;
             @include font-32;
             font-weight: 700;
-            -webkit-text-stroke-width: 1px;
-            -webkit-text-stroke-color: #050606;
-            font-family: 'Tusker-Grotesk-5700';
+            text-shadow: -4px 4px 0px rgba(2, 97, 207, 0.50);
+            -webkit-text-stroke-width: 3;
+            -webkit-text-stroke-color: #16161B;
             color: $white;
             text-transform: uppercase;
             border-radius: 16px;
