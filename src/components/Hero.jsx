@@ -3,11 +3,17 @@ import Snowfall from 'react-snowfall'
 import { Col, Container, Row } from "react-bootstrap";
 import heroImg1 from '../assets/img/heroImg1.png';
 import heroImg2 from '../assets/img/heroImg2.png';
-// import snowflake0 from '../assets/img/snow0.png';
-// import snowflake1 from '../assets/img/snow1.png';
+const snowflake0 = document.createElement('img')
+snowflake0.src = '/public/heroImg1.png'
+const snowflake1 = document.createElement('img')
+snowflake1.src = '/public/heroImg2.png'
+const snowflake3 = document.createElement('img')
+snowflake3.src = '/public/whoIseggshellImg.png'
 import MarqueeSection from './MarqueeCommon';
 import CopyToClipboard from './CopyToClipboard';
-// const images = [snowflake0, snowflake1];
+
+const images = [snowflake0, snowflake1, snowflake3];
+
 export default function Hero() {
   const title = "Eggshell";
   const desc = "Join the Luxe Life with EGGSHELL - The Pomeranian's Pick for Wealth and Whimsy";
@@ -23,7 +29,7 @@ export default function Hero() {
     };
   return (
     <section className="hero-area">
-       <Snowfall snowflakeCount={100}/>
+       <Snowfall snowflakeCount={400} images={images} speed={[0.5, 0.3]} changeFrequency={1000} wind={[-5, 3.0]} flakeWidth={'460px'} flakeHeight={'460px'}/>
       <Container>
         <Row>
           <Col md={5}>

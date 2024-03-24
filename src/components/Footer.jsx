@@ -30,7 +30,7 @@ export default function Footer() {
     const copyright = `© ${currentYear} ${companyName}`;
 
   return (
-    <footer className="footer">
+    <footer className="footer" style={{position:'relative'}}>
       <Container>
         <Row>
           <Col>
@@ -47,7 +47,7 @@ export default function Footer() {
           <Col lg={4} md={12} xs={12} className="text-center text-lg-start mb-4">
             <a href={btnLink} className="boxedBtn"><img className="btnLogo" src={fbtnLogo} alt="" />{btnTxt}</a>
           </Col>
-          <Col lg={4} md={6} className="text-center mt-md-4 pt-3 mt-md-0">
+          <Col lg={4} md={6} className="text-center mt-md-4 pt-3 pt-lg-0 mt-lg-0">
             <p>{copyright}</p>
           </Col>
           <Col lg={4} md={6} className="text-md-end text-center mt-4 mt-md-0">
