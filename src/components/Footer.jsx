@@ -30,7 +30,7 @@ export default function Footer() {
           </Col>
         </Row>
         <Row className="footer-bottom align-items-center">
-          <Col xs={8} className="text-center text-lg-start">
+          <Col xs={8}>
             <a href={btnLink} className="boxedBtn"><img className="btnLogo" src={fbtnLogo} alt="" />{btnTxt}</a>
           </Col>
           <Col xs={4} className="text-end">

@@ -19,7 +19,7 @@
          z-index: -1;
     }
     @include sm{
-        padding-top: 100px;
+        padding-top: 80px;
         padding-bottom: 40px;
     }
     &-top{
@@ -31,11 +31,17 @@
         .copytoclipboard-inner {
             margin: 22px auto 55px;
             max-width: 750px;
+            @include sm{
+                margin: 22px auto 40px;
+            }
         }
         .logo{
             img{
                 max-width: 358px;
                 margin:0 auto;
+                @include sm{
+                    max-width: 150px;
+                }
             }
         }
         h4{
@@ -43,6 +49,9 @@
             text-transform: uppercase; 
             display: inline-block;
             margin-bottom: 38px;
+            @include sm{
+                margin-bottom: 28px;
+            }
         }
     }
     &-bottom{

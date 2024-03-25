@@ -24,6 +24,9 @@
             font-weight: 600;
             width: 100%;
             padding-right: 10px; 
+            @include mmd{
+                font-size: 20px;
+            }
             @include sm{
                 font-size: 16px;
                 padding-right: 35px;
@@ -43,7 +46,7 @@
                 padding: 6px;
                 border-radius: 4px;
                 top: 50%;
-                right: 3px;
+                right: 7px;
                 bottom: auto;
                 transform: translateY(-50%);
                 width: 40px;

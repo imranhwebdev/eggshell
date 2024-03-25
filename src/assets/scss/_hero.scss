@@ -9,17 +9,30 @@
             max-width: 262px;
             margin-left:auto;
             margin-right: 5px;
+            @include md{
+                max-width: 180px;
+            }
             @include sm{
                 margin-right: auto;
-
+                max-width: 160px;
+            }
+            @include ssm{
+                max-width: 140px;
             }
         }
         .heroImg2{
             max-width: 667px;
             margin-bottom: -45px;
             margin-left: -15%;
+            @include md{
+                max-width: 350px;
+            }
             @include sm{
-                padding: 0 30px;
+                padding: 0;
+                margin-left: auto;
+                max-width: 70%;
+                margin-right: auto;
+                margin-top: 90px;
             }
         }
         h1{
@@ -29,8 +42,8 @@
             line-height: 120%;
             @include sm{
                 text-align: center;
-                margin-top: 30px;
-                margin-bottom: 20px;
+                margin-top: 20px;
+                margin-bottom: 10px;
             }
         }
         h5{
@@ -39,26 +52,34 @@
             color: $black;
         }
         .copytoclipboard-inner{
+            @include sm{
+                width: 100%;
+                max-width: 470px;
+                margin:0 auto;
+            }
             .copytoclipboard{
                 width: 100%;
                 max-width:calc(100% - 35px);
                 @include sm{
                     width: 100%;
+                    max-width: 470px;
+                    margin:0 auto;
                 }
             }
         }
     }
     &-content{
         margin-top: 86px;
-        @include sm{
-            margin-top: 40px;
-            text-align: center;
-        }
         @include lg{
             margin-bottom: 80px;
         }
         @include md{
-            margin-bottom: 80px;
+            margin-bottom: 160px;
+            margin-top: 50px;
+        }
+        @include sm{
+            margin-top: 40px;
+            text-align: center;
         }
         p{
             @include font-36;
@@ -121,6 +142,9 @@
                 @include md{
                     width: 50%;
                 }
+                @include sm{
+                    font-size: 15px;
+                }
                 @include ssm{
                     width: 50%;
                 }
@@ -139,6 +163,7 @@
                     position: relative;
                     border-right: 1px solid $black;
                     z-index: 1;
+                    font-weight: 800;
                 }
                 span:nth-child(4), span:last-child{
                     border:0;
@@ -187,6 +212,12 @@
                         background-position: center center;
                         z-index: -1;
                     }
+                    @include sm{
+                        bottom: -75px;
+                        padding: 10px 14px;
+                        padding-top: 20px;
+
+                    }
                 }
             }
             &-inner{
@@ -216,8 +247,3 @@
         }
     }
 }
-
-.custom-snowfall img {
-    width: 330px; /* Adjust size as needed */
-    height: auto; /* Adjust size as needed */
-  }

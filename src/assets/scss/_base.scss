@@ -41,22 +41,22 @@ h1{
 
 h2{
     @include font-175;
-    text-shadow: -10px 10px 0px #4C7EF6;
+    text-shadow: -7px 7px 0px #4C7EF6;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: #16161B;
     @include sm{
-        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-width: 2px;
         text-shadow: -5px 5px 0px #4C7EF6;
     }
 }
 
 h3{
     @include font-175;
-    text-shadow: -10px 10px 0px #4C7EF6;
-    -webkit-text-stroke-width: 2px;
+    text-shadow: -7px 7px 0px #4C7EF6;
+    -webkit-text-stroke-width: 3px;
     -webkit-text-stroke-color: #16161B;
     @include sm{
-        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-width: 2px;
         text-shadow: -5px 5px 0px #4C7EF6;
     }
 }
@@ -66,6 +66,10 @@ h4{
     text-shadow: -10px 10px 0px #4C7EF6;
     -webkit-text-stroke-width: 9px;
     -webkit-text-stroke-color: #16161B;
+    @include mmd{
+        -webkit-text-stroke-width: 5px;
+        text-shadow: -5px 5px 0px #4C7EF6;
+    }
     @include sm{
         -webkit-text-stroke-width: 5px;
         text-shadow: -5px 5px 0px #4C7EF6;

@@ -23,6 +23,9 @@
         z-index: 1;
         overflow: hidden;
         padding-bottom: 0;
+        @include lg{
+            padding: 50px 60px;
+        }
         @include mmd{
             border-radius: 15px;
             padding: 50px 60px;
@@ -70,7 +73,7 @@
                     max-width: 60px;
                 }
             }
-            @include ssm{
+            @include sm{
                 font-size: 22px;
             }
         }
@@ -80,6 +83,7 @@
             margin-top: -55px;
             @include sm{
                 margin-top: -30px;
+                max-width: 380px;
             }
         }
         .details{
