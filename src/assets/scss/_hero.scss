@@ -18,7 +18,7 @@
             --padding-bottom: 60px;
         }
         @include sm {
-            --padding-top: 50px;
+            --padding-top: 40px;
             --padding-bottom: 0;
         }
         .heroImg1 {
@@ -33,7 +33,7 @@
                 max-width: 160px;
             }
             @include ssm {
-                max-width: 140px;
+                max-width: 100px;
             }
         }
         .heroImg2 {
@@ -48,7 +48,7 @@
                 width: 40%;
                 position: unset !important;
                 margin: auto;
-                margin-top: 100px;
+                margin-top: 60px;
             }
         }
         h1 {
@@ -58,8 +58,8 @@
             line-height: 120%;
             @include sm {
                 text-align: center;
-                margin-top: 20px;
-                margin-bottom: 10px;
+                margin-top: 10px;
+                margin-bottom: 0px;
             }
         }
         h5 {
@@ -94,7 +94,7 @@
             margin-top: 50px;
         }
         @include sm {
-            margin-top: 40px;
+            margin-top: 30px;
             text-align: center;
         }
         p {

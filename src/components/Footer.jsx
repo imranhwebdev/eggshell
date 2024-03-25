@@ -6,11 +6,11 @@ import CopyToClipboard from './CopyToClipboard';
 export default function Footer() {
     const title = "$MOAT";
     const btnTxt = "COMING SOON";
-    const btnLink = "https://google.com";
+    const btnLink = "/";
     const socials = [
       {
         logo:<FaXTwitter />,
-        url:"https://google.com",
+        url:"https://twitter.com/MoatOnBase",
       },
     ];
   const tokenAddress = "PRESALE ADDRESS:";

@@ -23,9 +23,6 @@ export default function Egshellomics() {
   return (
     <>
       <section className="eggshellomics-area">
-        <figure className="egshmics d-none d-md-block">
-          <img src={eggshellomicsImg} alt="" />
-        </figure>
         <Container>
           <Row>
             <Col>
@@ -47,6 +44,9 @@ export default function Egshellomics() {
             </Col>
           </Row>
         </Container>
+        <figure className="egshmics">
+          <img src={eggshellomicsImg} alt="" />
+        </figure>
       </section>
       <MarqueeCommon />
     </>
