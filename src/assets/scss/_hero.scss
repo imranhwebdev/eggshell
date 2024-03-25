@@ -1,93 +1,92 @@
-.hero{
-    &-area{
-        padding-top: 128px;
+.hero {
+    &-area {
+        --padding-top: 128px;
+        --padding-bottom: 486px;
+        padding-top: var(--padding-top);
+        padding-bottom: var(--padding-bottom);
         background-color: $_bg2;
-        @include sm{
-            padding-top: 80px;
+        position: relative;
+        z-index: 1;
+        @include sm {
+            --padding-top: 80px;
         }
-        .heroImg1{
+        .heroImg1 {
             max-width: 262px;
-            margin-left:auto;
+            margin-left: auto;
             margin-right: 5px;
-            @include md{
+            @include md {
                 max-width: 180px;
             }
-            @include sm{
+            @include sm {
                 margin-right: auto;
                 max-width: 160px;
             }
-            @include ssm{
+            @include ssm {
                 max-width: 140px;
             }
         }
-        .heroImg2{
-            max-width: 667px;
-            margin-bottom: -45px;
-            margin-left: -15%;
-            @include md{
-                max-width: 350px;
-            }
-            @include sm{
-                padding: 0;
-                margin-left: auto;
-                max-width: 70%;
-                margin-right: auto;
-                margin-top: 90px;
+        .heroImg2 {
+            width: 38%;
+            position: absolute;
+            left: 2%;
+            bottom: 0;
+            @media (min-width: 2400px) {
+                width: 30%;
             }
         }
-        h1{
+        h1 {
             color: $white;
             margin-bottom: 15px;
             text-transform: uppercase;
             line-height: 120%;
-            @include sm{
+            @include sm {
                 text-align: center;
                 margin-top: 20px;
                 margin-bottom: 10px;
             }
         }
-        h5{
+        h5 {
             @include font-33;
             margin-bottom: 16px;
             color: $black;
         }
-        .copytoclipboard-inner{
-            @include sm{
+        .copytoclipboard-inner {
+            @include sm {
                 width: 100%;
                 max-width: 470px;
-                margin:0 auto;
+                margin: 0 auto;
             }
-            .copytoclipboard{
+            .copytoclipboard {
                 width: 100%;
-                max-width:calc(100% - 35px);
-                @include sm{
+                max-width: calc(100% - 35px);
+                @include sm {
                     width: 100%;
                     max-width: 470px;
-                    margin:0 auto;
+                    margin: 0 auto;
                 }
             }
         }
     }
-    &-content{
+    &-content {
         margin-top: 86px;
-        @include lg{
+        @include lg {
             margin-bottom: 80px;
         }
-        @include md{
+        @include md {
             margin-bottom: 160px;
             margin-top: 50px;
         }
-        @include sm{
+        @include sm {
             margin-top: 40px;
             text-align: center;
         }
-        p{
+        p {
             @include font-36;
             color: $_343230;
             max-width: 653px;
             margin-bottom: 40px;
         }
-        .value{
+        .value {
             border-radius: 11.374px;
             border: 2px solid #343230;
             background-color: $white;
@@ -96,26 +95,26 @@
             margin-bottom: 50px;
             @include font-28;
             color: $_484855;
-            @include lg{
+            @include lg {
                 flex-wrap: wrap;
             }
-            @include md{
+            @include md {
                 flex-wrap: wrap;
             }
-            @include ssm{
+            @include ssm {
                 flex-wrap: wrap;
             }
-            .value_bar{
+            .value_bar {
                 padding: 17.061px 22.747px;
                 border-radius: 11.374px;
                 border: 3px solid #EEE;
                 background: $white;
                 line-height: 140%
             }
-            .value_bar.active{
+            .value_bar.active {
                 border: 3px solid #397FFE;
             }
-            & button{
+            & button {
                 width: 100%;
                 border-radius: 11.374px;
                 border: 3px solid #EEE;
@@ -126,52 +125,60 @@
                 font-weight: 400;
                 padding: 8px 0px;
                 line-height: 140%;
-                &.active{
+                &.active {
                     border: 3px solid #397FFE;
                 }
-                @include xl{
+                @include xl {
                     font-size: 22px;
                 }
-                @include md{
+                @include md {
                     font-size: 15px;
                 }
-                @include lg{
+                @include lg {
                     width: 50%;
                     font-size: 20px;
                 }
-                @include md{
+                @include md {
                     width: 50%;
                 }
-                @include sm{
+                @include sm {
                     font-size: 15px;
                 }
-                @include ssm{
+                @include ssm {
                     width: 50%;
                 }
             }
         }
-        & .prograss{
-            &-bar{
+        & .prograss {
+            &-item {
+                grid-template-columns: repeat(4, 1fr);
+                &>div {
+                    cursor: pointer;
+                    &:not(:last-child) {
+                        border-right: 1px solid #343230;
+                    }
+                }
+            }
+            &-bar {
                 position: relative;
                 border-radius: 32px;
                 border: 1px solid #343230;
                 background: $white;
                 height: 24px;
-                display: grid;
-                grid-template-columns: repeat(4, 1fr);
-                span{
+                span {
                     position: relative;
                     border-right: 1px solid $black;
                     z-index: 1;
                     font-weight: 800;
                 }
-                span:nth-child(4), span:last-child{
-                    border:0;
+                span:nth-child(4),
+                span:last-child {
+                    border: 0;
                 }
-                span.active{
+                span.active {
                     border-radius: 32px;
                     background: #397FFE;
-                    &::before{
+                    &::before {
                         position: absolute;
                         content: "";
                         right: -20px;
@@ -186,9 +193,8 @@
                         background-repeat: no-repeat;
                         background-position: center center;
                     }
-                    
                 }
-                .price{
+                .price {
                     position: absolute;
                     bottom: -95px;
                     right: 0;
@@ -198,7 +204,7 @@
                     z-index: 1;
                     padding: 10px 20px;
                     padding-top: 25px;
-                    &::before{
+                    &::before {
                         position: absolute;
                         content: "";
                         top: 0;
@@ -212,15 +218,14 @@
                         background-position: center center;
                         z-index: -1;
                     }
-                    @include sm{
+                    @include sm {
                         bottom: -75px;
                         padding: 10px 14px;
                         padding-top: 20px;
-
                     }
                 }
             }
-            &-inner{
+            &-inner {
                 background-color: $primary;
                 width: var(--width);
                 position: absolute;
@@ -228,20 +233,20 @@
                 height: 100%;
                 left: 0;
                 border-radius: 10px;
-                &::before{
+                &::before {
                     content: "";
-                    --width:40px;
+                    --width: 40px;
                     width: var(--width);
                     height: var(--width);
                     border-radius: 100%;
                     border: 2px solid $black;
                     position: absolute;
                     top: 50%;
-                    right: 0;
+                    right: -3px;
+                    z-index: 2;
                     background-color: $white;
                     transform: translateY(-50%);
                     filter: drop-shadow(2px 2px 0px #000);
-
                 }
             }
         }
