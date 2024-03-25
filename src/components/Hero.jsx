@@ -6,15 +6,13 @@ import heroImg2 from '../assets/img/heroImg2.png';
 import MarqueeSection from './MarqueeCommon';
 import CopyToClipboard from './CopyToClipboard';
 const snowflake0 = document.createElement('img')
-snowflake0.src = '/public/heroImg1.png'
+snowflake0.src = heroImg1
 const snowflake1 = document.createElement('img')
-snowflake1.src = '/public/heroImg2.png'
+snowflake1.src = heroImg1
 const snowflake2 = document.createElement('img')
-snowflake2.src = '/public/whoIseggshellImg.png'
+snowflake2.src = heroImg1
 const images = [snowflake0, snowflake1, snowflake2];
 export default function Hero() {
-
-
   const title = "$MOAT";
   const presaleAddress = "PRESALE ADDRESS:";
 

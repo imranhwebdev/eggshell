@@ -1,15 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap');
-html, html body{
+html,
+html body {
     overflow-x: hidden;
 }
 
 @font-face {
     font-family: 'Ballo';
     src: url('../fonts/Baloo-Regular.ttf');
-    src: local('☺'),  
-         url('../fonts/Baloo-Regular.ttf') format('truetype'), 
+    src: local('☺'), url('../fonts/Baloo-Regular.ttf') format('truetype'),
 }
-
 
 body {
     font-family: 'Ballo';
@@ -26,57 +25,58 @@ h4,
 h5,
 h6 {
     font-family: 'Ballo';
-};
+}
 
-h1{
+;
+h1 {
     @include font-250;
     text-shadow: -10px 10px 0px #4C7EF6;
     -webkit-text-stroke-width: 9px;
     -webkit-text-stroke-color: #16161B;
-    @include sm{
+    @include sm {
         -webkit-text-stroke-width: 5px;
         text-shadow: -6px 7px 0px #4C7EF6;
     }
 }
 
-h2{
+h2 {
     @include font-175;
     text-shadow: -7px 7px 0px #4C7EF6;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: #16161B;
-    @include sm{
+    @include sm {
         -webkit-text-stroke-width: 2px;
         text-shadow: -5px 5px 0px #4C7EF6;
     }
 }
 
-h3{
+h3 {
     @include font-175;
     text-shadow: -7px 7px 0px #4C7EF6;
     -webkit-text-stroke-width: 3px;
     -webkit-text-stroke-color: #16161B;
-    @include sm{
+    @include sm {
         -webkit-text-stroke-width: 2px;
         text-shadow: -5px 5px 0px #4C7EF6;
     }
 }
 
-h4{
+h4 {
     @include font-120;
     text-shadow: -10px 10px 0px #4C7EF6;
     -webkit-text-stroke-width: 9px;
     -webkit-text-stroke-color: #16161B;
-    @include mmd{
+    @include mmd {
         -webkit-text-stroke-width: 5px;
         text-shadow: -5px 5px 0px #4C7EF6;
     }
-    @include sm{
+    @include sm {
         -webkit-text-stroke-width: 5px;
         text-shadow: -5px 5px 0px #4C7EF6;
     }
 }
 
-h5{
+h5 {
     @include font-40;
 }
 
@@ -89,7 +89,7 @@ img {
     height: auto;
 }
 
-figure{
+figure {
     margin-bottom: 0;
 }
 
@@ -136,26 +136,25 @@ input::-webkit-inner-spin-button {
 }
 
 .container {
-   max-width: 1640px;
+    max-width: 1640px;
 }
 
-
-.section-title{
-    h2{
+.section-title {
+    h2 {
         text-transform: uppercase;
         color: #FEF8F8;
         font-weight: 700;
     }
 }
 
-.socials{
-    li{
+.socials {
+    li {
         display: inline-block;
         margin-left: 24px;
-        @include sm{
+        @include sm {
             margin-left: 15px;
         }
-        a{
+        a {
             width: 95px;
             height: 95px;
             display: flex;
@@ -165,44 +164,42 @@ input::-webkit-inner-spin-button {
             border: 1.189px solid #343230;
             background: #FFF;
             box-shadow: 3.234px 3.234px 0px 0px #000;
-            svg{
+            svg {
                 color: $black;
                 font-size: 45px;
-                @include xl{
+                @include xl {
                     font-size: 26px;
                 }
-                @include lg{
+                @include lg {
                     font-size: 26px;
                 }
-                @include mmd{
+                @include mmd {
                     font-size: 26px;
                 }
             }
-            @include xl{
+            @include xl {
                 width: 60px;
                 height: 60px;
             }
-            @include lg{
+            @include lg {
                 width: 60px;
                 height: 60px;
             }
-            @include mmd{
-                width: 60px;
-                height: 60px;
+            @include mmd {
+                width: 55px;
+                height: 55px;
             }
         }
     }
-    li:nth-child(1){
+    li:nth-child(1) {
         margin-left: 0;
     }
-    li:hover a{
+    li:hover a {
         border: 1.189px solid $primary;
         background: $primary;
         box-shadow: 3.234px 3.234px 0px 0px #000;
-
     }
-    li:hover a svg{
-       color: $white;
+    li:hover a svg {
+        color: $white;
     }
-   
 }
