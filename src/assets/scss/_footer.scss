@@ -96,6 +96,10 @@
                 @include mmd{
                     margin-right: 10px;
                 }
+                @include ssm{
+                    max-width: 30px;
+                    margin-right: 10px;
+                }
             }
         }
     }
