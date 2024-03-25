@@ -29,28 +29,43 @@ h6 {
 };
 
 h1{
-    @include font-231;
+    @include font-250;
     text-shadow: -10px 10px 0px #4C7EF6;
-    -webkit-text-stroke-width: 9;
+    -webkit-text-stroke-width: 9px;
     -webkit-text-stroke-color: #16161B;
+    @include sm{
+        -webkit-text-stroke-width: 5px;
+    }
 }
 
 h2{
-    @include font-160;
+    @include font-175;
     text-shadow: -10px 10px 0px #4C7EF6;
-    -webkit-text-stroke-width: 9;
+    -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: #16161B;
+    @include sm{
+        -webkit-text-stroke-width: 1px;
+    }
 }
 
 h3{
-    @include font-147;
+    @include font-175;
+    text-shadow: -10px 10px 0px #4C7EF6;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #16161B;
+    @include sm{
+        -webkit-text-stroke-width: 1px;
+    }
 }
 
 h4{
-    @include font-140;
+    @include font-120;
     text-shadow: -10px 10px 0px #4C7EF6;
-    -webkit-text-stroke-width: 9;
+    -webkit-text-stroke-width: 9px;
     -webkit-text-stroke-color: #16161B;
+    @include sm{
+        -webkit-text-stroke-width: 5px;
+    }
 }
 
 h5{

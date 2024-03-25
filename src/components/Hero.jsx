@@ -1,76 +1,96 @@
-import React from 'react'
-import Snowfall from 'react-snowfall'
+import React, { useState } from 'react';
+import Snowfall from 'react-snowfall';
 import { Col, Container, Row } from "react-bootstrap";
 import heroImg1 from '../assets/img/heroImg1.png';
 import heroImg2 from '../assets/img/heroImg2.png';
+import MarqueeSection from './MarqueeCommon';
+import CopyToClipboard from './CopyToClipboard';
 const snowflake0 = document.createElement('img')
 snowflake0.src = '/public/heroImg1.png'
 const snowflake1 = document.createElement('img')
 snowflake1.src = '/public/heroImg2.png'
 const snowflake2 = document.createElement('img')
 snowflake2.src = '/public/whoIseggshellImg.png'
-import MarqueeSection from './MarqueeCommon';
-import CopyToClipboard from './CopyToClipboard';
-
 const images = [snowflake0, snowflake1, snowflake2];
-
 export default function Hero() {
+  
+
   const title = "$MOAT";
-    const progressValue = [
-      {
-        value: "25",
-        price: "$10,00,00",
-      },
-    ];
-    const defaultProgressValue = {
-      value:progressValue[0].value,
-      price:progressValue[0].price,
-    };
+  const presaleAddress = "PRESALE ADDRESS:";
+  
+  const progressValue = [
+    {
+      title: "START",
+      value: "25",
+      price: "$44,251",
+    },
+    {
+      title: "GOOD",
+      value: "50",
+      price: "$84,251",
+    },
+    {
+      title: "VERY GOOD",
+      value: "75",
+      price: "$120,251",
+    },
+    {
+      title: "FINISH",
+      value: "100",
+      price: "$160,251",
+    },
+  ];
+  const [defaultProgressValue, setDefaultProgressValue] = useState({
+    value: progressValue[0].value,
+    price: progressValue[0].price,
+  });
+  const [activeIndex, setActiveIndex] = useState(0);
+  const progressHandle = (newValue, newPrice, index) => {
+    setDefaultProgressValue({
+      value: newValue,
+      price: newPrice,
+    });
+    setActiveIndex(index)
+  };
+
   return (
     <section className="hero-area">
-       <Snowfall snowflakeCount={400} images={images} speed={[0.5, 0.3]} changeFrequency={1000} wind={[-5, 3.0]} flakeWidth={'460px'} flakeHeight={'460px'}/>
+      <Snowfall snowflakeCount={400} speed={[0.4, 0.3]} images={images} />
       <Container>
         <Row>
-          <Col md={5}>
+          <Col md={6}>
             <figure className='heroImg1'>
               <img src={heroImg1} alt="" />
             </figure>
           </Col>
-          <Col md={7}>
+          <Col md={6}>
             <h1>{title}</h1>
-           <CopyToClipboard />
+            <h5 className='text-center'>{presaleAddress}</h5>
+            <CopyToClipboard />
           </Col>
         </Row>
         <Row className="align-items-end align-items-lg-start">
-          <Col md={5} className="order-2 order-md-1">
-              <figure className='heroImg2'>
-                <img src={heroImg2} alt="" />
-              </figure>
+          <Col md={6} className="order-2 order-md-1">
+            <figure className='heroImg2'>
+              <img src={heroImg2} alt="" />
+            </figure>
           </Col>
-          <Col md={{ span: 6, offset: 1 }}  className="order-1 order-md-2">
+          <Col md={6} className="order-1 order-md-2 text-end">
             <div className="hero-content">
-
-                <div className="value d-flex align-items-center">
-                  <div className="value_bar active"></div>
-                  <div className="value_bar"></div>
-                  <div className="value_bar"></div>
-                  <div className="value_bar"></div>
-                  {progressValue.map((item, index)=>(
-                    <span key={index}>{item.value}</span>
-                  ))}
+              <div className="value d-flex align-items-center">
+                {progressValue.map((item, index) => (
+                  <button className={index === activeIndex ? 'active' : ''} onClick={() => progressHandle(item.value, item.price, index)} key={index}>{item.title}</button>
+                ))}
+              </div>
+              <div className="prograss-bar">
+                <div className="prograss-inner" style={{ width: defaultProgressValue.value + '%' }}>
+                <div className="prograss-inner-wrap"></div>
+                <span className="price">
+                  <span>{defaultProgressValue.price}</span>
+                </span>
                 </div>
-                <div className="prograss-bar">
-                  <span className="active"></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span className="price">
-                  {progressValue.map((item, index)=>(
-                    <span key={index}>{item.price}</span>
-                  ))}
-                  </span>
-                </div>
-            </div> 
+              </div>
+            </div>
           </Col>
         </Row>
       </Container>

@@ -1,14 +1,16 @@
 import { Container, Row, Col } from "react-bootstrap";
 import eggshellomicsImg from '../assets/img/eggshellomics.png'
+import base from '../assets/img/base.png'
 import MarqueeCommon from "./MarqueeCommon";
 export default function Egshellomics() {
-  const title = "MOATenomics";
+  const title = "$MOATenomics";
   const eggmicsService = [
     {
-      title: "THE Base <br /> coop"
+      icon: base,
+      title: "Coop"
     },
     {
-      title: "FAIR <br /> LAUNCH"
+      title: "FAIR LAUNCH"
     },
     {
       title: "TOTAL SUPPLY <br /> TBA"
@@ -16,7 +18,8 @@ export default function Egshellomics() {
     {
       title: "50% LP <br /> 50% PRESALEW"
     },
-  ]
+  ];
+
   return (
     <section className="eggshellomics-area">
       <figure className="egshmics d-none d-md-block">
@@ -35,6 +38,7 @@ export default function Egshellomics() {
             <div className="eggshellomics-service">
               {eggmicsService.map((item, index)=>(
                 <div className="single-item" key={index}>
+                  <img src={item.icon} alt="" />
                   <h5 key={index} dangerouslySetInnerHTML={{ __html: item.title }} />
                 </div>
               ))}

@@ -16,17 +16,17 @@
     }
     &-info{
         border-radius: 48px;
-        border: 8px solid #343230;
-        background: #FFF;
-        padding-top: 120px;
+        border: 8px solid #397FFE;
+        background: $_bg1;
+        padding: 90px 145px;
         position: relative;
         z-index: 1;
         overflow: hidden;
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-bottom: 0;
         @include sm{
             border-radius: 15px;
-            padding-top: 90px;
+            padding: 50px 80px;
+            padding-bottom: 0;
         }
         &::before{
             position: absolute;
@@ -39,30 +39,27 @@
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center center;
+            z-index: -1;
         }
         h3{
             color: #FEF8F8;
             font-weight: 700;
             text-transform: uppercase;
-            margin-bottom: 40px;
-            text-shadow: -10px 10px 0px #4C7EF6;
-            -webkit-text-stroke-width: 9;
-            -webkit-text-stroke-color: #16161B;
-
+            margin-bottom: 35px;
         }
         p{
-            @include font-52;
-            font-weight: 500;
-            color: $_343230;
+            @include font-53;
+            font-weight: 600;
+            color: $black;
             line-height: 145%;
         }
         figure{
             max-width: 690px;
             margin:0 auto;
+            margin-top: -55px;
         }
         .details{
-            max-width: 1092px;
-            margin: 0 auto;
+            max-width: 1179px;
         }
     }
 }

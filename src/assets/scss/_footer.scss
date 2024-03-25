@@ -89,14 +89,6 @@
                 }
             }
         }
-        p{
-            @include font-48;
-            font-family: 'FormulaCondensed';
-            font-weight: 700;
-            letter-spacing: 3.84px;
-            text-transform: capitalize;
-            color: $paragraph;
-        }
     }
     .copytoclipboard{
         background-color: #F1F2F7;
