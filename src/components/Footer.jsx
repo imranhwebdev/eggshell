@@ -30,10 +30,10 @@ export default function Footer() {
           </Col>
         </Row>
         <Row className="footer-bottom align-items-center">
-          <Col sm={6} className="text-center text-lg-start mb-4">
+          <Col xs={8} className="text-center text-lg-start">
             <a href={btnLink} className="boxedBtn"><img className="btnLogo" src={fbtnLogo} alt="" />{btnTxt}</a>
           </Col>
-          <Col sm={6} className="text-end mt-4 mt-md-0">
+          <Col xs={4} className="text-end">
             <ul className="socials">
               {socials.map((item, index)=>(
                 <li key={index}><a href={item.url}>{item.logo}</a></li>

@@ -23,9 +23,17 @@
         z-index: 1;
         overflow: hidden;
         padding-bottom: 0;
-        @include sm{
+        @include mmd{
             border-radius: 15px;
-            padding: 50px 80px;
+            padding: 50px 60px;
+            padding-bottom: 0;
+        }
+        @include sm{
+            padding: 30px 40px;
+            padding-bottom: 0;
+        }
+        @include ssm{
+            padding: 30px 20px;
             padding-bottom: 0;
         }
         &::before{
@@ -46,17 +54,33 @@
             font-weight: 700;
             text-transform: uppercase;
             margin-bottom: 35px;
+            line-height: 1em;
         }
         p{
             @include font-53;
             font-weight: 600;
             color: $black;
             line-height: 145%;
+            & svg{
+                max-width: 140px;
+                @include sm{
+                    max-width: 90px;
+                }
+                @include ssm{
+                    max-width: 60px;
+                }
+            }
+            @include ssm{
+                font-size: 22px;
+            }
         }
         figure{
             max-width: 690px;
             margin:0 auto;
             margin-top: -55px;
+            @include sm{
+                margin-top: -30px;
+            }
         }
         .details{
             max-width: 1179px;

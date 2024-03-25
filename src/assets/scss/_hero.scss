@@ -75,6 +75,15 @@
             margin-bottom: 50px;
             @include font-28;
             color: $_484855;
+            @include lg{
+                flex-wrap: wrap;
+            }
+            @include md{
+                flex-wrap: wrap;
+            }
+            @include ssm{
+                flex-wrap: wrap;
+            }
             .value_bar{
                 padding: 17.061px 22.747px;
                 border-radius: 11.374px;
@@ -98,6 +107,22 @@
                 line-height: 140%;
                 &.active{
                     border: 3px solid #397FFE;
+                }
+                @include xl{
+                    font-size: 22px;
+                }
+                @include md{
+                    font-size: 15px;
+                }
+                @include lg{
+                    width: 50%;
+                    font-size: 20px;
+                }
+                @include md{
+                    width: 50%;
+                }
+                @include ssm{
+                    width: 50%;
                 }
             }
         }
