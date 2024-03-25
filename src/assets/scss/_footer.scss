@@ -2,8 +2,8 @@
     position: relative;
     z-index: 1;
     padding-top: 180px;
-    padding-bottom: 80px;
-    background-color: $_bg1;
+    padding-bottom: 65px;
+    background-color: $white;
     
     &::before{
         position: absolute;
@@ -24,13 +24,13 @@
     }
     &-top{
         text-align: center;
+        h5{
+            margin-top: 25px;
+            @include font-32;
+        }
         .copytoclipboard-inner {
-            margin: -90px auto 95px;
+            margin: 22px auto 55px;
             max-width: 750px;
-            @include mmd{
-                margin: -50px auto 55px;
-
-            }
         }
         .logo{
             img{
@@ -42,7 +42,7 @@
             color: $white;
             text-transform: uppercase; 
             display: inline-block;
-            margin-bottom: 55px;
+            margin-bottom: 38px;
         }
     }
     &-bottom{
@@ -51,7 +51,7 @@
             @include font-32;
             font-weight: 700;
             text-shadow: -4px 4px 0px rgba(2, 97, 207, 0.50);
-            -webkit-text-stroke-width: 3;
+            -webkit-text-stroke-width: 1.5px;
             -webkit-text-stroke-color: #16161B;
             color: $white;
             text-transform: uppercase;
@@ -91,9 +91,10 @@
         }
     }
     .copytoclipboard{
-        background-color: #F1F2F7;
+        background-color: $white;
+        padding: 15px 18px;
         input{
-            background-color: #F1F2F7;
+            background-color: $white;
         }
     }
 }

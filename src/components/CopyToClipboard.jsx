@@ -17,7 +17,6 @@ export default function CopyToClipboard() {
   return (
     <div className="copytoclipboard-inner">
         <div className="copytoclipboard">
-            <span className='c_title'></span> 
             <input readOnly type="text"  value={textToCopy}
                 onChange={(e) => setTextToCopy(e.target.value)}/>
             <button onClick={handleCopyToClipboard}>

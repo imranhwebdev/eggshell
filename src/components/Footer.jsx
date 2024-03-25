@@ -13,7 +13,7 @@ export default function Footer() {
         url:"https://google.com",
       },
     ];
-
+  const tokenAddress = "PRESALE ADDRESS:";
   return (
     <footer className="footer" style={{position:'relative'}}>
       <Container>
@@ -23,6 +23,7 @@ export default function Footer() {
               <a href="/" className="logo">
                 <img src={footerLogo} alt="" />
               </a>
+              <h5>{tokenAddress}</h5>
               <CopyToClipboard />
             <h4 className='footer-title'>{title}</h4>
             </div>
