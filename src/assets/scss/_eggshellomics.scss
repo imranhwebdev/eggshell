@@ -91,6 +91,7 @@
             }
             h5{
                 margin-bottom: 0;
+                text-transform: uppercase;
                 @include font-48;
                 @include xl{
                     font-size: 35px;
