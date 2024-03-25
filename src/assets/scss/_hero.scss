@@ -170,7 +170,7 @@
             &-item {
                 grid-template-columns: repeat(4, 1fr);
                 &>div {
-                    cursor: pointer;
+                    // cursor: pointer;
                     &:not(:last-child) {
                         border-right: 1px solid #343230;
                     }

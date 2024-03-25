@@ -54,7 +54,7 @@ export default function Hero() {
   return (
     <>
       <section className="hero-area">
-        <Snowfall size={1000} snowflakeCount={400} maxSnowflakeSize={300} speed={[0.4, 0.3]} images={images} />
+        {/* <Snowfall size={1000} snowflakeCount={400} maxSnowflakeSize={300} speed={[0.4, 0.3]} images={images} /> */}
         
         <Container>
           <Row>
@@ -80,7 +80,7 @@ export default function Hero() {
                   <button className={index === activeIndex ? 'active' : ''} onClick={() => progressHandle(item.value, item.price, index)} key={index}>{item.title}</button>
                 ))}
               </div> */}
-                <div className="prograss-bar d-none d-md-block">
+                <div className="prograss-bar d-none">
                   <div className="prograss-item position-absolute left-0 w-100 top-0 z-1 h-100 d-grid">
                     {progressValue.map((item, index) => (
                       <div key={index} onClick={() => progressHandle(item.value, item.price, index)}></div>
@@ -94,7 +94,7 @@ export default function Hero() {
                   </div>
                 </div>
 
-                <div className="prograss-bar d-md-none">
+                <div className="prograss-bar">
                   <div className="prograss-item position-absolute left-0 w-100 top-0 z-1 h-100 d-grid">
                     {progressValue.map((item, index) => (
                       <div key={index} className='border-0'></div>
