@@ -10,7 +10,8 @@
     position: relative;
     z-index: 99;
     @include sm {
-        padding: 20px 0;
+        padding: 10px 0;
+        border-width: 2px;
     }
     .rfm-initial-child-container {
         gap: 32px;
@@ -20,6 +21,9 @@
                 rotate: -2deg;
                 img {
                     max-width: 176px;
+                    @include sm {
+                        max-width: 90px;
+                    }
                 }
             }
         }

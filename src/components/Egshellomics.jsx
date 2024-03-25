@@ -16,7 +16,7 @@ export default function Egshellomics() {
       title: "TOTAL SUPPLY <br /> TBA"
     },
     {
-      title: "50% LP <br /> 50% PRESALEW"
+      title: "50% LP <br /> 50% PRESALE"
     },
   ];
 
