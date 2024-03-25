@@ -1,7 +1,7 @@
-.copytoclipboard-inner{
+.copytoclipboard-inner {
     position: relative;
     z-index: 1;
-    .copytoclipboard{
+    .copytoclipboard {
         position: relative;
         border-radius: 16px;
         border: 1px solid #050606;
@@ -12,27 +12,30 @@
         display: flex;
         align-items: center;
         width: 100%;
-        @include sm{
+        @include sm {
             padding: 15px;
             border-radius: 10px;
         }
-        input{
-            padding:0;
-            border:0;
+        input {
+            padding: 0;
+            border: 0;
             color: $black;
             @include font-28;
             font-weight: 600;
             width: 100%;
-            padding-right: 10px; 
-            @include mmd{
+            padding-right: 10px;
+            @include mmd {
                 font-size: 20px;
             }
-            @include sm{
+            @include sm {
                 font-size: 16px;
                 padding-right: 35px;
             }
+            @include ssm {
+                font-size: 11px;
+            }
         }
-        button{
+        button {
             padding: 10px;
             border-radius: 6.4px;
             border: 2.133px solid #000;
@@ -42,7 +45,7 @@
             right: -39px;
             width: 64px;
             height: 64px;
-            @include sm{
+            @include sm {
                 padding: 6px;
                 border-radius: 4px;
                 top: 50%;
@@ -52,15 +55,15 @@
                 width: 40px;
                 height: 40px;
             }
-            img{
+            img {
                 max-width: 34px;
-                @include sm{
+                @include sm {
                     max-width: 25px;
                 }
             }
-            svg{
+            svg {
                 font-size: 34px;
-                @include sm{
+                @include sm {
                     font-size: 25px;
                 }
             }
