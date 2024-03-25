@@ -55,7 +55,7 @@ export default function Hero() {
 
   return (
     <section className="hero-area">
-      <Snowfall snowflakeCount={400} speed={[0.4, 0.3]} images={images} />
+      <Snowfall snowflakeCount={400} speed={[0.4, 0.3]} images={images} maxSize={120} />
       <Container>
         <Row>
           <Col md={6}>
