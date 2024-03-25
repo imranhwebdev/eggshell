@@ -7,8 +7,19 @@
         background-color: $_bg2;
         position: relative;
         z-index: 1;
+        @include xl {
+            --padding-bottom: 400px;
+        }
+        @include lg {
+            --padding-bottom: 250px;
+        }
+        @include md {
+            --padding-top: 100px;
+            --padding-bottom: 60px;
+        }
         @include sm {
-            --padding-top: 80px;
+            --padding-top: 50px;
+            --padding-bottom: 0;
         }
         .heroImg1 {
             max-width: 262px;
@@ -32,6 +43,12 @@
             bottom: 0;
             @media (min-width: 2400px) {
                 width: 30%;
+            }
+            @include sm {
+                width: 40%;
+                position: unset !important;
+                margin: auto;
+                margin-top: 100px;
             }
         }
         h1 {

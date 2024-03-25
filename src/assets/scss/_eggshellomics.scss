@@ -1,44 +1,44 @@
-.eggshellomics{
-    &-area{
+.eggshellomics {
+    &-area {
         padding-top: 125px;
         padding-bottom: 0px;
         background-color: $_bg2;
         position: relative;
-        @include mmd{
+        @include md {
             padding-top: 80px;
         }
-        @include sm{
-            padding-top: 80px;
+        @include sm {
+            padding-top: 60px;
         }
         & .egshmics {
             position: absolute;
             width: 40%;
             bottom: 0;
             left: 0;
-            img{
+            img {
                 max-width: 630px;
             }
         }
-        .marquee{
-            transform: translateY(30px) rotate(-0.844deg);
-            @include sm{
-                transform: translateY(10px) rotate(-0.844deg);
-            }
-        }
-        .section-title{
-            h2{
-                @include sm{
-                 font-size: 50px;
-                 margin-bottom: 0;
+        // .marquee{
+        //     transform: translateY(30px) rotate(-0.844deg);
+        //     @include sm{
+        //         transform: translateY(10px) rotate(-0.844deg);
+        //     }
+        // }
+        .section-title {
+            h2 {
+                @include sm {
+                    font-size: 50px;
+                    margin-bottom: 0;
                 }
-                @include ssm{
-                 font-size: 45px;
-                 margin-bottom: 0;
+                @include ssm {
+                    font-size: 45px;
+                    margin-bottom: 0;
                 }
             }
         }
     }
-    &-service{
+    &-service {
         margin-top: 65px;
         margin-bottom: 300px;
         border-radius: 48px;
@@ -49,57 +49,70 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
-        @include mmd{
+        @include xxl {
+            padding: 55px;
+        }
+        @include xl {
+            padding: 40px;
+        }
+        @include lg {
+            margin-bottom: 200px;
+        }
+        @include md {
             margin-top: 50px;
             margin-bottom: 80px;
-            padding: 30px;
+            padding: 24px;
         }
-        @include sm{
+        @include sm {
             margin-top: 30px;
             margin-bottom: 75px;
-            padding: 20px;
+            padding: 50px;
             border-radius: 20px;
-        }
-        @include ssm{
             grid-template-columns: 1fr;
-            padding: 15px;
+            gap: 24px;
         }
-        .single-item{
+        @include ssm {
+            padding: 34px;
+        }
+        .single-item {
             border-radius: 24px;
             border: 4px solid #000;
             background: #E1ECF7;
             box-shadow: 4px 4px 0px 0px #343230;
-            padding:50px 10px;
+            padding: 50px 10px;
             text-align: center;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            & img{
+            & img {
                 max-width: 140px;
                 margin-bottom: 6px;
-                @include sm{
+                @include sm {
                     max-width: 70px;
                 }
             }
-            @include mmd{
+            @include md {
                 padding: 40px 20px;
             }
-            @include sm{
+            @include sm {
                 border-radius: 15px;
                 padding: 30px 10px;
             }
-            h5{
+            h5 {
                 margin-bottom: 0;
                 text-transform: uppercase;
                 @include font-48;
-                @include xl{
+                @include xxl {
+                    font-size: 42px;
+                }
+                @include xl {
                     font-size: 35px;
                 }
-                @include lg{
+                @include lg {
                     font-size: 25px;
                 }
-                @include mmd{
+                @include mmd {
                     font-size: 25px;
                 }
             }

@@ -57,9 +57,6 @@ export default function Hero() {
     <>
       <section className="hero-area">
         <Snowfall snowflakeCount={400} speed={[0.4, 0.3]} images={images} />
-        <figure className='heroImg2'>
-          <img src={heroImg2} alt="" />
-        </figure>
         <Container>
           <Row>
             <Col md={6}>
@@ -101,6 +98,9 @@ export default function Hero() {
             </Col>
           </Row>
         </Container>
+        <figure className='heroImg2'>
+          <img src={heroImg2} alt="" />
+        </figure>
       </section>
       <MarqueeSection />
     </>

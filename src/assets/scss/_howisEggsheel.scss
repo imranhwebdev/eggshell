@@ -1,20 +1,25 @@
-.who{
-    &-area{
-        padding-top: 200px;
-        padding-bottom: 150px;
+.who {
+    &-area {
+        --padding-y: 144px;
+        padding: var(--padding-y) 0;
         background-color: $white;
-        @include sm{
-            padding-top: 120px;
-            padding-bottom: 90px;
+        @include lg {
+            --padding-y: 110px;
         }
-        .marquee{
-            transform: translateY(170px) rotate(-0.844deg);
-            @include sm{
-                transform: translateY(98px) rotate(-0.844deg);
-            }
+        @include md {
+            --padding-y: 80px;
         }
+        @include sm {
+            --padding-y: 60px;
+        }
+        // .marquee {
+        //     transform: translateY(170px) rotate(-0.844deg);
+        //     @include sm {
+        //         transform: translateY(98px) rotate(-0.844deg);
+        //     }
+        // }
     }
-    &-info{
+    &-info {
         border-radius: 48px;
         border: 8px solid #397FFE;
         background: $_bg1;
@@ -22,24 +27,30 @@
         position: relative;
         z-index: 1;
         overflow: hidden;
-        padding-bottom: 0;
-        @include lg{
+        padding-bottom: 0 !important;
+        @include xxl {
+            padding: 90px 100px;
+        }
+        @include xl {
+            padding: 90px 100px;
+        }
+        @include lg {
             padding: 50px 60px;
         }
-        @include mmd{
+        @include mmd {
             border-radius: 15px;
             padding: 50px 60px;
             padding-bottom: 0;
         }
-        @include sm{
+        @include sm {
             padding: 30px 40px;
             padding-bottom: 0;
         }
-        @include ssm{
+        @include ssm {
             padding: 30px 20px;
             padding-bottom: 0;
         }
-        &::before{
+        &::before {
             position: absolute;
             content: "";
             left: 0;
@@ -52,42 +63,48 @@
             background-position: center center;
             z-index: -1;
         }
-        h3{
+        h3 {
             color: #FEF8F8;
             font-weight: 700;
             text-transform: uppercase;
             margin-bottom: 35px;
             line-height: 1em;
+            @include sm {
+                margin-bottom: 24px;
+            }
         }
-        p{
+        p {
             @include font-53;
             font-weight: 600;
             color: $black;
             line-height: 145%;
-            & svg{
+            & svg {
                 max-width: 140px;
-                @include sm{
+                @include sm {
                     max-width: 90px;
                 }
-                @include ssm{
+                @include ssm {
                     max-width: 60px;
                 }
             }
-            @include sm{
+            @include sm {
                 font-size: 22px;
             }
         }
-        figure{
+        figure {
             max-width: 690px;
-            margin:0 auto;
+            margin: 0 auto;
             margin-top: -55px;
-            @include sm{
-                margin-top: -30px;
+            @include sm {
+                margin-top: 20px;
                 max-width: 380px;
             }
         }
-        .details{
-            max-width: 1179px;
+        .details {
+            max-width: 1180px;
+            @include sm {
+                text-align: center;
+            }
         }
     }
 }
